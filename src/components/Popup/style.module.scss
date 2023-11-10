@@ -1,0 +1,34 @@
+@use "@/styles/utils" as *;
+
+.popup {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  grid-auto-columns: minmax(0, 60rem);
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.content {
+  position: relative;
+  background-color: var(--color-base);
+  padding-block: 2rem;
+  padding-inline: .5rem;
+
+  @media ($mobile-l) {
+    padding-inline: 3rem;
+  }
+}
+
+.closeButton {
+  color: var(--color-accent);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}

@@ -1,0 +1,86 @@
+@use "@/styles/utils" as *;
+
+.content {
+  @include Container;
+  padding-block: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+
+  @media (min-width: 1000px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+  }
+}
+
+.info {
+  @media ($desktop) {
+    flex-basis: 40%;
+  }
+}
+
+.title {
+  @include SectionTitle;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 5rem;
+}
+
+.contact {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  @include text-hover;
+}
+
+.socials {
+  display: flex;
+  margin-top: 5rem;
+  gap: 2rem;
+}
+
+.social {
+  color: var(--color-accent);
+
+  @include text-hover(var(--color-accent-1));
+
+  svg {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.gradient {
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  background-color: var(--color-accent);
+  filter: blur(48px);
+  z-index: 0;
+  border-radius: 100%;
+  top: -6rem;
+  left: 50%;
+  translate: -50%;
+  @media (min-width: 1000px) {
+    left: 0;
+    top: 50%;
+    translate: -50% -50%;
+  }
+}
+
+.map {
+  width: 100%;
+  height: 35rem;
+
+  @media (min-width: 1000px) {
+    width: 30rem;
+    height: 25rem;
+  }
+}

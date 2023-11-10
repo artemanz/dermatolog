@@ -1,0 +1,25 @@
+@use "@/styles/utils" as *;
+
+.sliderContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @media ($desktop) {
+    flex-direction: column-reverse;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  gap: 4rem;
+
+  @media ($desktop) {
+    justify-content: flex-end;
+  }
+}
+
+.slide {
+  cursor: grab;
+}

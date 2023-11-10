@@ -1,0 +1,23 @@
+@use "@/styles/utils" as *;
+
+.content {
+  @include Container;
+  padding-block: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+
+.title {
+  color: var(--color-accent);
+  font-family: var(--font-secondary);
+  font-size: 2rem;
+
+  @media ($desktop) {
+    font-size: 3rem;
+  }
+}
+
+.slider {
+  margin-top: 2rem;
+}

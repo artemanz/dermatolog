@@ -1,0 +1,137 @@
+@use "@/styles/utils" as *;
+
+.content {
+  @include Container;
+  padding-block: 3.5rem;
+  @media ($desktop) {
+    padding-inline: 0;
+  }
+}
+
+.title {
+  @include SectionTitle;
+
+  @media ($desktop) {
+    padding-inline: 1rem;
+  }
+}
+
+.list {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.card {
+  position: relative;
+  display: flex;
+
+  &:nth-child(even) {
+    .cardContent {
+      @media ($desktop) {
+        flex-direction: row-reverse;
+      }
+      .cardGradient {
+        @media ($desktop) {
+          left: 100%;
+          translate: -85%;
+        }
+      }
+    }
+  }
+
+  &Content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+
+    @media ($desktop) {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 4rem;
+    }
+  }
+
+  &Info {
+    position: relative;
+    flex: 1 0 55%;
+
+    @media ($desktop) {
+      max-width: 55%;
+    }
+  }
+
+  &Image {
+    position: relative;
+    @media ($desktop) {
+      height: 28rem;
+      flex-shrink: 0;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &Gradient {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    background-color: var(--color-accent);
+    filter: blur(48px);
+    z-index: 0;
+    top: 0;
+    left: 50%;
+    translate: -50% -15%;
+    border-radius: 100%;
+
+    @media ($desktop) {
+      width: 12rem;
+      height: 12rem;
+      top: 0;
+      left: 0;
+      translate: -15% -15%;
+    }
+  }
+
+  &Title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    @media ($desktop) {
+      font-size: 2rem;
+      padding-inline: 1rem;
+    }
+    @media ($hd) {
+      font-size: 3rem;
+    }
+  }
+
+  &Text {
+    color: var(--color-neutral);
+    white-space: pre-line;
+    margin-top: 1rem;
+    @media ($desktop) {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.line {
+  position: absolute;
+  max-width: none;
+  top: 4rem;
+  left: -4rem;
+  z-index: -1;
+  // height: 95%;
+  // width: 67.5rem;
+  display: none;
+
+  @media ($hd) {
+    display: flex;
+  }
+}

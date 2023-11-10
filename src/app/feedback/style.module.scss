@@ -1,0 +1,46 @@
+@use "@/styles/utils" as *;
+
+.section {
+  margin-bottom: 5rem;
+  position: relative;
+  min-height: 62rem;
+}
+
+.bg,
+.mobileBg {
+  @include BackgroundImage;
+}
+
+.bg {
+  display: none;
+  @media ($desktop) {
+    display: block;
+  }
+}
+
+.mobileBg {
+  @media ($desktop) {
+    display: none;
+  }
+}
+
+.content {
+  @include Container;
+  padding-top: 16rem;
+  padding-bottom: 12rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  @include H1;
+}
+
+.sliderContainer {
+  margin-block: 5rem;
+}
+
+.button {
+  @include Button;
+  margin-inline: auto;
+}

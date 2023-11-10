@@ -1,0 +1,11 @@
+@use "@/styles/utils" as *;
+
+.content {
+  @include Container;
+  padding-block: 8rem;
+}
+
+.title {
+  @include SectionTitle;
+  margin-bottom: 5rem;
+}

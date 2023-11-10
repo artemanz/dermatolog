@@ -1,0 +1,76 @@
+@use "@/styles/utils" as *;
+
+.content {
+  @include Container;
+  border-bottom: 1px solid #fff;
+  p {
+    line-height: 1.7;
+
+    @media ($desktop) {
+      font-size: 1.25rem;
+    }
+  }
+
+  h3 {
+    color: var(--color-accent);
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    font-size: 2rem;
+
+    @media ($desktop) {
+      font-size: 3rem;
+    }
+  }
+}
+
+.gradient {
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 100%;
+  background-color: var(--color-accent);
+  filter: blur(52px);
+  top: 100%;
+  left: 50%;
+  translate: -50% -75%;
+
+  @media ($hd) {
+    left: 0;
+    translate: -25% -25%;
+    top: 0;
+  }
+}
+
+.block {
+  padding-block: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.textBlock {
+  border: 2px solid #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  @media ($desktop) {
+    font-size: 1.25rem;
+  }
+}
+
+.image {
+  position: relative;
+  margin-top: 5rem;
+  flex-shrink: 0;
+
+  @media ($hd) {
+    max-width: 50%;
+    margin-top: 0;
+  }
+}
+
+.line {
+  border-color: var(--color-accent);
+  width: 90%;
+  margin: 2.5rem auto;
+}

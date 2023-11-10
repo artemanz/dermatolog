@@ -1,0 +1,70 @@
+@use "@/styles/utils" as *;
+
+.container {
+  @include Container;
+  z-index: 1;
+  padding-block: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.burger {
+  transition: color 300ms ease;
+  @include hover {
+    color: var(--color-accent);
+  }
+
+  @media (min-width: 900px) {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  inset-inline: 0;
+  background: var(--color-base);
+  font-size: 1.5rem;
+  border-end-end-radius: 0.5rem;
+  border-end-start-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 11;
+
+  a {
+    padding-inline: 1rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    @include hover {
+      background-color: var(--color-neutral);
+    }
+  }
+
+  @media (min-width: 900px) {
+    display: none;
+  }
+}
+
+.desktopNav {
+  display: none;
+
+  ul {
+    display: flex;
+    gap: 1rem;
+
+    @media ($hd) {
+      gap: 3rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  a {
+    @include text-hover;
+  }
+
+  @media (min-width: 900px) {
+    display: flex;
+  }
+}

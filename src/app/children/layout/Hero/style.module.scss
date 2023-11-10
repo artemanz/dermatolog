@@ -1,0 +1,45 @@
+@use "@/styles/utils" as *;
+
+.image, .mobileImage {
+  @include BackgroundImage;
+}
+
+.image {
+  display: none;
+
+  @media ($desktop) {
+    display: block;
+  }
+}
+
+.mobileImage {
+  @media ($desktop) {
+    display: none;
+  }
+}
+
+.content {
+  @include Container;
+  padding-top: 15rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  @include H1;
+}
+
+.text {
+  font-size: 1.25rem;
+  margin-top: 4rem;
+  max-width: 35rem;
+margin-bottom: 10rem;
+
+  span {
+    color: var(--color-accent);
+  }
+
+  @media ($desktop) {  max-width: 45rem;
+    font-size: 1.5rem;
+  }
+}

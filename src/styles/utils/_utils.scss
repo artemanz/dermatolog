@@ -1,0 +1,21 @@
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin text-hover($color: var(--color-accent)) {
+  transition: var(--transition-colors);
+  @include hover {
+    color: $color;
+  }
+}
+
+@mixin bg-hover($color: var(--color-accent-1)) {
+  transition: var(--transition-colors);
+  @include hover {
+    background-color: $color;
+  }
+}

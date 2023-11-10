@@ -1,0 +1,46 @@
+@use "@/styles/utils" as *;
+
+.controls {
+  display: flex;
+  align-items: center;
+  max-width: 40rem;
+  margin-inline: auto;
+  margin-top: 5rem;
+}
+
+.review {
+  background: var(--color-neutral-1);
+  padding: 1.5rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 0.75rem;
+  height: 100%;
+
+  &Image {
+    border-radius: 100%;
+    width: 5rem;
+    aspect-ratio: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  &Text {
+    white-space: pre-line;
+    color: var(--color-neutral);
+    overflow-y: auto;
+    max-height: 20rem;
+    margin-top: 2rem;
+
+    @include CustomScrollbar;
+  }
+
+  &Link {
+    color: var(--color-neutral);
+
+    @include text-hover(#fff);
+  }
+
+  &Header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,66 @@
+@use "@/styles/utils" as *;
+
+.form {
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  top: -10%;
+  @media ($laptop) {
+    top: 0;
+    left: 10%;
+    right: auto;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+  @media ($laptop) {
+    margin-top: 3rem;
+  }
+  @media ($hd) {
+    min-width: 24rem;
+  }
+}
+
+.content {
+  max-width: 62.5rem;
+  margin-inline: auto;
+  position: relative;
+  @media ($laptop) {
+    display: flex;
+    gap: 5rem;
+  }
+}
+
+.input {
+  @include Input;
+}
+
+.inputGroup {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-grow: 1;
+
+  @media ($laptop) {
+    max-width: 34rem;
+    margin-top: 0;
+    margin-inline: auto;
+  }
+}
+
+.button {
+  @include Button;
+  margin-inline: auto;
+  margin-top: 3rem;
+  @media ($laptop) {
+    margin-inline: 0 auto;
+  }
+}

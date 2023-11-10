@@ -1,0 +1,138 @@
+@use "utils" as *;
+@use "bp" as *;
+
+@mixin Container {
+  padding-inline: 1rem;
+  position: relative;
+  max-width: 84rem;
+  margin-inline: auto;
+}
+
+@mixin List {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 0.625rem;
+      height: 0.625rem;
+      flex-shrink: 0;
+      background-color: var(--color-neutral);
+      margin-top: 0.5rem;
+      border-radius: 100%;
+    }
+  }
+}
+
+@mixin Button {
+  display: block;
+  background-color: var(--color-accent);
+  padding: 1.5rem 3.5rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-family: var(--font-secondary);
+  white-space: nowrap;
+  font-size: 1.25rem;
+
+  @include bg-hover;
+
+  @media ($desktop) {
+    font-size: 1.5rem;
+  }
+}
+
+@mixin H1 {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1;
+  @media ($desktop) {
+    font-size: 4rem;
+  }
+}
+
+@mixin AccentText {
+  font-family: var(--font-secondary);
+  color: var(--color-accent);
+  font-size: 2rem;
+  @media ($desktop) {
+    font-size: 3rem;
+  }
+}
+
+@mixin SectionTitle {
+  line-height: 1;
+  font-size: 3rem;
+  font-weight: bold;
+  @media ($desktop) {
+    font-size: 5rem;
+  }
+}
+
+@mixin CustomScrollbar {
+  & {
+    scrollbar-color: var(--color-accent) #333;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0.75vw;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--color-accent);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-accent-1);
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #3335;
+  }
+}
+
+@mixin Input {
+  background-color: transparent;
+  border-bottom: 1px solid var(--color-accent);
+  width: 100%;
+  padding-block: 1.5rem;
+
+  &::placeholder {
+    color: var(--color-neutral);
+  }
+
+  &:focus {
+    outline: none;
+    &::placeholder {
+      color: #fff;
+    }
+  }
+
+  &[data-state="invalid"] {
+    border-color: var(--color-error);
+    color: var(--color-error);
+    &::placeholder {
+      color: var(--color-error);
+    }
+  }
+
+  @media ($hd) {
+    font-size: 1.5rem;
+  }
+}
+
+@mixin BackgroundImage {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  inset: 0;
+}

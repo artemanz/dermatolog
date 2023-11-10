@@ -1,0 +1,43 @@
+@layer base {
+  :root {
+    --color-base: #2f2f2f;
+    --color-accent: #d09877;
+    --color-accent-1: #b28468;
+    --color-secondary: #89807b;
+    --color-secondary-1: #68605c;
+    --color-neutral: #909090;
+    --color-neutral-1: #464646;
+    --color-foreground: #ffffff;
+
+    --color-error: #ef4444;
+
+    --font-primary: "Roboto", sans-serif;
+    --font-secondary: "Muller", sans-serif;
+
+    --transition-colors: color 300ms ease, background-color 300ms ease;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: var(--font-primary);
+    font-weight: 300;
+    background: var(--color-base);
+    color: var(--color-foreground);
+  }
+
+  .ymaps-layers-pane {
+    -ms-filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -o-filter: grayscale(1);
+    filter: grayscale(1);
+   }
+}

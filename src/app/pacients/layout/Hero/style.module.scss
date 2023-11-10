@@ -1,0 +1,45 @@
+@use "@/styles/utils" as *;
+
+.bg {
+  @include BackgroundImage;
+}
+
+.content {
+  @include Container;
+  padding-top: 24rem;
+  display: flex;
+  flex-direction: column;
+
+  @media ($desktop) {
+
+padding-top: 12rem;
+  }
+}
+
+.title {
+  @include H1;
+  text-transform: uppercase;
+}
+
+.button {
+  @include Button;
+}
+
+.buttonsGroup {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+
+  @media ($desktop) {
+    flex-direction: row;
+  }
+}
+
+.buttonSecondary {
+  @include Button;
+  background-color: var(--color-secondary);
+
+  @include bg-hover(var(--color-secondary-1));
+}

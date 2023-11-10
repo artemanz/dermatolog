@@ -1,0 +1,43 @@
+@use "../utils" as *;
+
+@layer components {
+  .SwiperControl {
+    color: var(--color-accent);
+    width: 4rem;
+    border-radius: 100%;
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+    border: 1px solid var(--color-accent);
+
+    &:disabled {
+      opacity: 0.25;
+    }
+
+    &:not(:disabled) {
+      @include hover {
+        @include bg-hover;
+        @include text-hover(#fff);
+      }
+    }
+  }
+
+  .SwiperPagination {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .SwiperBullet {
+    display: block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 100%;
+    border: 1px solid var(--color-accent);
+
+    &.active {
+      background-color: var(--color-accent);
+    }
+  }
+}

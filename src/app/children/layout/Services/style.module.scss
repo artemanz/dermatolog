@@ -1,0 +1,52 @@
+@use "@/styles/utils" as *;
+
+.content {
+  @include Container;
+  padding-block: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+
+.title {
+  color: var(--color-accent);
+  font-family: var(--font-secondary);
+  font-size: 2rem;
+
+  @media ($desktop) {
+    font-size: 3rem;
+  }
+}
+
+.slider {
+  margin-top: 2rem;
+}
+
+.info {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-direction: column;
+
+  @media ($desktop) {
+    flex-direction: row;
+    gap: 8rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+
+    @media ($desktop) {
+      font-size: 1.5rem;
+    }
+  }
+
+  span {
+    color: var(--color-accent);
+  }
+}
+
+.button {
+  @include Button;
+}

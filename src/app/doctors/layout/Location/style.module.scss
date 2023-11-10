@@ -1,0 +1,40 @@
+@use "@/styles/utils" as *;
+
+.content {
+  @include Container;
+  padding-block: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media ($desktop) {
+    gap: 4rem;
+
+    p {
+      font-size: 1.25rem;
+      max-width: 50%;
+    }
+  }
+}
+
+.title {
+  color: var(--color-accent);
+  font-family: var(--font-secondary);
+  font-size: 2rem;
+  line-height: 1.2;
+
+  @media ($desktop) {
+    font-size: 3rem;
+  }
+}
+
+.picture {
+  display: none;
+
+  @media ($desktop) {
+    display: block;
+    position: absolute;
+    top: 25%;
+    right: 15%;
+  }
+}

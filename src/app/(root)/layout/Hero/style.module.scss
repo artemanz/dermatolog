@@ -1,0 +1,112 @@
+@use "@/styles/utils" as *;
+
+.section {
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+
+  .desktop {
+    display: none;
+
+    @media ($desktop) {
+      display: block;
+    }
+  }
+  .mobile {
+    @media ($desktop) {
+      display: none;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+.content {
+  @include Container;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 10rem;
+
+  @media ($desktop) {
+    padding-top: 18rem;
+  }
+}
+
+.h1 {
+  @include H1;
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+  margin-bottom: 2rem;
+
+  @media ($desktop) {
+    font-size: 6rem;
+  }
+}
+
+.subtitle {
+  @include AccentText;
+  @media ($desktop) {
+    margin-bottom: 7rem;
+  }
+}
+
+.listContainer {
+  margin-top: 1rem;
+  @media ($desktop) {
+    position: absolute;
+    bottom: 25%;
+    right: 2rem;
+    margin-bottom: 0;
+  }
+}
+
+.list {
+  @include List;
+
+  @media ($desktop) {
+    font-size: 1.25rem;
+  }
+}
+
+.line {
+  color: var(--color-accent);
+  position: absolute;
+  top: -2rem;
+  left: -3rem;
+  pointer-events: none;
+  display: none;
+
+  @media ($desktop) {
+    display: flex;
+  }
+}
+
+.button {
+  @include Button;
+  margin-top: 2rem;
+  margin-inline: auto;
+
+  @media ($desktop) {
+    margin-inline: 0;
+  }
+}
+
+.scrollButton {
+  margin-top: 4rem;
+  margin-inline: auto;
+  transition: color 300ms ease;
+  @include hover {
+    color: var(--color-accent);
+  }
+}

@@ -1,0 +1,14 @@
+@use "@/styles/utils" as *;
+
+.content {
+  @include Container;
+  padding-block: 4rem;
+}
+
+.title {
+  @include SectionTitle;
+}
+
+.sliderContainer {
+  margin-block: 5rem;
+}

@@ -1,0 +1,14 @@
+@use "@/styles/utils" as *;
+
+.reviews {
+  @include Container;
+
+  display: grid;
+  padding-block: 10rem;
+  gap: 2.5rem;
+  max-width: 70rem;
+
+  @media ($desktop) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
