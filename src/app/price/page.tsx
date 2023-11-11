@@ -7,20 +7,11 @@ import bg2 from "./assets/block-2.jpg";
 import bg3 from "./assets/block-3.jpg";
 import bg4 from "./assets/block-4.jpg";
 import { PriceList } from "./PriceList";
-import { getPriceList } from "@/common/actions/getPriceList";
 import { Motion } from "@/components/Motion";
+import { data } from "./data";
 
-const Price = async () => {
-  const [data, error] = await getPriceList();
-
-  if (error)
-    return (
-      <main>
-        <p className="text-center">
-          Произошла ошибка. <br /> Попробуйте зайти позже
-        </p>
-      </main>
-    );
+const Price =  () => {
+  // const [data, error] = await getPriceList();
 
   return (
     <main>

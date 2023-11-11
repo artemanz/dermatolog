@@ -2,22 +2,12 @@ import Image from "next/image";
 import bg from "./assets/bg.jpg";
 import mobilebg from "./assets/mobile-bg.jpg";
 import c from "./style.module.scss";
-import { getReviews } from "@/common/actions/getReviews";
-import Link from "next/link";
 import { NAVIGATION } from "@/common/navigation";
 import { Reviews as ReviewsSlider } from "@/components";
+import { reviews } from "@/common/reviews";
 
 const Reviews = async () => {
-  const [reviews, error] = await getReviews();
-
-  if (error)
-    return (
-      <main>
-        <p className="text-center">
-          Произошла ошибка. <br /> Попробуйте зайти позже
-        </p>
-      </main>
-    );
+  // const [reviews, error] = await getReviews();
 
   return (
     <main>

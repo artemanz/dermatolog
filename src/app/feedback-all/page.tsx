@@ -1,10 +1,10 @@
-import { getReviews } from "@/common/actions/getReviews";
 import c from "./style.module.scss";
-import Image from "next/image";
 import { Review } from "@/components";
+import { reviews } from "@/common/reviews";
 
 const Page = async () => {
-  const [reviews, error] = await getReviews();
+  // const [reviews, error] = await getReviews();
+
   return (
     <main>
       <ul className={c.reviews}>

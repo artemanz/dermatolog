@@ -1,12 +1,13 @@
 import c from "./style.module.scss";
 
-import { getReviews } from "@/common/actions/getReviews";
+import { reviews } from "@/common/reviews";
 import { Reviews } from "@/components/Reviews";
 
 interface Props {}
 
 const Feedback = async (props: Props) => {
-  const [reviews] = await getReviews();
+  // const [reviews] = await getReviews();
+
   return (
     <section>
       <div className={c.content}>
