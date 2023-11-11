@@ -2,7 +2,8 @@
 
 .content {
   @include Container;
-  padding-block: 4rem;
+  padding-top: 8rem;
+  padding-bottom: 2rem
 }
 
 .title {

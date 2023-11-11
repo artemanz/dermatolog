@@ -13,6 +13,7 @@
 
     --font-primary: "Roboto", sans-serif;
     --font-secondary: "Muller", sans-serif;
+    --font-accent: 'STIX Two Text Variable', sans-serif;
 
     --transition-colors: color 300ms ease, background-color 300ms ease;
   }
@@ -32,12 +33,4 @@
     background: var(--color-base);
     color: var(--color-foreground);
   }
-
-  .ymaps-layers-pane {
-    -ms-filter: grayscale(1);
-    -webkit-filter: grayscale(1);
-    -moz-filter: grayscale(1);
-    -o-filter: grayscale(1);
-    filter: grayscale(1);
-   }
 }

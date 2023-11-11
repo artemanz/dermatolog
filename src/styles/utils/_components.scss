@@ -70,9 +70,8 @@
 @mixin SectionTitle {
   line-height: 1;
   font-size: 3rem;
-  font-weight: bold;
   @media ($desktop) {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 
@@ -135,4 +134,11 @@
   width: 100%;
   position: absolute;
   inset: 0;
+}
+
+@mixin GradientEllipse {
+  background-image: url("/gradient.png");
+  background-size: cover;
+  width: 31.25rem;
+  height: 31.25rem;
 }

@@ -12,7 +12,7 @@ export interface IData {
 
 export async function getPriceList() {
   try {
-    const res = await fetch("http://localhost:3000/pricelist.json");
+    const res = await fetch(process.env.NEXT_PUBLIC_HOST + "/pricelist.json");
     const data = await res.json();
 
     return [data, null];

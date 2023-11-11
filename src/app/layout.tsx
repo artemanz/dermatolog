@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import "@/assets/fonts";
-import "@/common/styles";
+import "@/styles";
 
 import { Header } from "@/components";
 

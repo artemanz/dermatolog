@@ -24,20 +24,19 @@
 }
 
 .gradient {
+  @include GradientEllipse;
+
   position: absolute;
-  width: 15rem;
-  height: 15rem;
-  border-radius: 100%;
-  background-color: var(--color-accent);
-  filter: blur(52px);
-  top: 100%;
-  left: 50%;
-  translate: -50% -75%;
+  width: 20rem;
+  height: 20rem;
+  display: none;
 
   @media ($hd) {
+    display: block;
+    scale: 1;
     left: 0;
-    translate: -25% -25%;
-    top: 0;
+    top: 50%;
+    translate: -40% -50%;
   }
 }
 

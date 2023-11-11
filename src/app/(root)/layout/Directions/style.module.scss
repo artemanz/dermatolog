@@ -4,13 +4,13 @@
   @include Container;
   padding-block: 3.5rem;
   @media ($desktop) {
-    padding-inline: 0;
+    padding-inline: 2rem;
   }
 }
 
 .title {
   @include SectionTitle;
-
+  font-weight: bold;
   @media ($desktop) {
     padding-inline: 1rem;
   }
@@ -35,7 +35,7 @@
       .cardGradient {
         @media ($desktop) {
           left: 100%;
-          translate: -85%;
+          translate: -60% -25%;
         }
       }
     }
@@ -58,7 +58,7 @@
 
   &Info {
     position: relative;
-    flex: 1 0 55%;
+    flex: 1 0 50%;
 
     @media ($desktop) {
       max-width: 55%;
@@ -68,46 +68,36 @@
   &Image {
     position: relative;
     @media ($desktop) {
-      height: 28rem;
-      flex-shrink: 0;
-      height: 100%;
       object-fit: cover;
     }
   }
 
   &Gradient {
+    @include GradientEllipse;
     position: absolute;
-    width: 10rem;
-    height: 10rem;
-    background-color: var(--color-accent);
-    filter: blur(48px);
+
     z-index: 0;
     top: 0;
     left: 50%;
-    translate: -50% -15%;
-    border-radius: 100%;
+    translate: -50% -40%;
+    scale: 0.5;
 
     @media ($desktop) {
-      width: 12rem;
-      height: 12rem;
+      scale: 0.75;
       top: 0;
       left: 0;
-      translate: -15% -15%;
+      translate: -40% -25%;
     }
   }
 
   &Title {
+    font-family: var(--font-accent);
     font-size: 1.25rem;
-    font-weight: bold;
-    line-height: 1.2;
     text-transform: uppercase;
 
     @media ($desktop) {
       font-size: 2rem;
       padding-inline: 1rem;
-    }
-    @media ($hd) {
-      font-size: 3rem;
     }
   }
 
@@ -116,7 +106,7 @@
     white-space: pre-line;
     margin-top: 1rem;
     @media ($desktop) {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
     }
   }
 }
@@ -124,12 +114,11 @@
 .line {
   position: absolute;
   max-width: none;
-  top: 4rem;
-  left: -4rem;
+  top: 2rem;
+  left: -2rem;
   z-index: -1;
-  // height: 95%;
-  // width: 67.5rem;
   display: none;
+  height: 95%;
 
   @media ($hd) {
     display: flex;

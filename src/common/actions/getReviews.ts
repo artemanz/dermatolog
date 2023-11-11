@@ -13,7 +13,7 @@ export function getReviews(): Promise<[null, unknown]>;
 
 export async function getReviews() {
   try {
-    const res = await fetch("http://localhost:3000/reviews.json");
+    const res = await fetch(process.env.NEXT_PUBLIC_HOST+"/reviews.json");
     const data = await res.json();
 
     return [data, null];

@@ -58,13 +58,11 @@
 }
 
 .gradient {
+  @include GradientEllipse;
   position: absolute;
-  width: 18rem;
-  height: 18rem;
-  background-color: var(--color-accent);
-  filter: blur(48px);
+  width: 20rem;
+  height: 20rem;
   z-index: 0;
-  border-radius: 100%;
   top: -6rem;
   left: 50%;
   translate: -50%;

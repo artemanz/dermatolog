@@ -3,7 +3,6 @@
 import { CONTACTS, SOCIALS } from "@/common/contacts";
 import c from "./style.module.scss";
 import Script from "next/script";
-import { useEffect } from "react";
 
 interface Props {}
 
@@ -55,6 +54,18 @@ const Contacts = (props: Props) => {
           </div>
         </div>
       </div>
+
+      <style>
+        {`
+        .ymaps-2-1-79-ground-pane {
+          filter: grayscale(1);
+          -ms-filter: grayscale(1);
+          -webkit-filter: grayscale(1);
+          -moz-filter: grayscale(1);
+          -o-filter: grayscale(1);
+          }
+        `}
+      </style>
 
       <Script
         onLoad={() => {
