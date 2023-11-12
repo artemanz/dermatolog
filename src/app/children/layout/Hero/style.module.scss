@@ -18,11 +18,13 @@
   }
 }
 
-.content {
+.container {
   @include Container;
-  padding-top: 15rem;
-  display: flex;
-  flex-direction: column;
+  @include Hero;
+}
+
+.content {
+  @include HeroWrapper;
 }
 
 .title {
@@ -33,7 +35,6 @@
   font-size: 1.25rem;
   margin-top: 4rem;
   max-width: 35rem;
-margin-bottom: 10rem;
 
   span {
     color: var(--color-accent);

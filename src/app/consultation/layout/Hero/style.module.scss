@@ -1,42 +1,40 @@
 @use "@/styles/utils" as *;
 
 .bg {
-  object-fit: cover;
+  @include BackgroundImage;
   object-position: 35% 0;
-  position: absolute;
-  height: 100%;
-  width: 100%
+}
+
+.container {
+  @include Container;
+  @include Hero;
 }
 
 .content {
-  @include Container;
-  padding-top: 16rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  @include HeroWrapper;
 }
 
 .title {
   @include H1;
-  font-size: 2.5rem;
-
-  @media ($desktop) {
-    font-size: 4rem;
-  }
 }
 
 .button {
   @include Button;
-  margin-top: 8rem;
+  margin-block: 5rem;
 }
 
 .price {
-  @include AccentText;
+  @include HeroSubtitle;
+  font-size: 2.5rem;
   margin-top: 2rem;
+  @media ($desktop) {
+    margin-top: 4rem;
+    font-size: 3rem;
+  }
 }
 
 .scrollButton {
-  margin-top: 4rem;
+  margin-top: 5rem;
   margin-inline: auto;
   justify-content: center;
   transition: color 300ms ease;

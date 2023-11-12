@@ -1,9 +1,7 @@
 @use "@/styles/utils" as *;
 
 .section {
-  margin-bottom: 5rem;
   position: relative;
-  min-height: 62rem;
 }
 
 .bg,
@@ -24,10 +22,9 @@
   }
 }
 
-.content {
+.container {
   @include Container;
-  padding-top: 16rem;
-  padding-bottom: 12rem;
+  padding-block: 8rem;
   display: flex;
   flex-direction: column;
 }

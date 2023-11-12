@@ -6,12 +6,12 @@ export const PriceList = async ({ data }: { data: IData }) => {
   return (
     <div className={c.priceList}>
       {data.title && <p className={c.priceListTitle}>{data.title}</p>}
-      <ul className="flex flex-col gap-16 mt-12 desktop:mt-20">
+      <ul className="flex flex-col gap-20">
         {data.blocks.map((b) => (
           <Motion element="li" animate="from_bottom" key={b.priceList.title}>
             <p className={c.priceListSubtitle}>{b.priceList.title}</p>
 
-            <ul className="flex flex-col gap-10 mt-12 desktop:mt-20">
+            <ul className="flex flex-col gap-8 mt-6">
               {b.priceList.prices.map((p) => (
                 <Motion
                   element="li"

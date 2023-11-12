@@ -4,26 +4,24 @@
   @include BackgroundImage;
 }
 
-.content {
+.container {
   @include Container;
-  padding-top: 24rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+@include Hero;
+}
 
-  @media ($desktop) {
-    padding-top: 12rem;
-  }
+.content {
+  @include HeroWrapper;
 }
 
 .title {
   @include H1;
-  text-transform: uppercase;
 }
 
 .info {
   margin-top: 2rem;
-  max-width: 20rem;
+  max-width: 25rem;
+  font-size: 1.25rem;
+
   @media ($desktop) {
     max-width: 30rem;
     font-size: 1.5rem;
@@ -32,7 +30,7 @@
 
 .button {
   @include Button;
-  margin-top: 6rem;
+  margin-block: 5rem;
 }
 
 .buttonSecondary {
@@ -40,4 +38,8 @@
   background-color: var(--color-secondary);
 
   @include bg-hover(var(--color-secondary-1));
+}
+
+.scrollButton{
+  @include ScrollButton;
 }

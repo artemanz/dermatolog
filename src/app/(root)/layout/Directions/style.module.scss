@@ -20,7 +20,7 @@
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 5rem;
 }
 
 .card {
@@ -92,7 +92,7 @@
 
   &Title {
     font-family: var(--font-accent);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
 
     @media ($desktop) {
@@ -105,9 +105,7 @@
     color: var(--color-neutral);
     white-space: pre-line;
     margin-top: 1rem;
-    @media ($desktop) {
-      font-size: 1.125rem;
-    }
+    font-size: 1.125rem;
   }
 }
 

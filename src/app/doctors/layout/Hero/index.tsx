@@ -12,24 +12,31 @@ const Hero = (props: Props) => {
     <section className="relative">
       <Image className={c.bg} src={bg} alt="Врач" />
 
-      <div className={c.content}>
-        <Motion animate="from_bottom">
-          <h1 className={c.title}>Врачам</h1>
-        </Motion>
+      <div className={c.container}>
+        <div className={c.content}>
+          <Motion animate="from_bottom">
+            <h1 className={c.title}>Врачам</h1>
+          </Motion>
 
-        <Motion element="p" animate="from_left" className={c.info} delay={0.5}>
-          Все программы обучения подходят для праĸтиĸующих врачей
-          дерматоонĸологов, дерматологов и ĸосметологов, ординаторов и
-          студентов.
-        </Motion>
+          <Motion
+            element="p"
+            animate="from_left"
+            className={c.info}
+            delay={0.5}
+          >
+            Все программы обучения подходят для праĸтиĸующих врачей
+            дерматоонĸологов, дерматологов и ĸосметологов, ординаторов и
+            студентов.
+          </Motion>
 
-        <Motion animate="from_bottom" delay={0.75}>
-          <a className={c.button} href={CTA}>
-            Записаться на обучение
-          </a>
-        </Motion>
+          <Motion animate="from_bottom" delay={0.75}>
+            <a className={c.button} href={CTA}>
+              Записаться на обучение
+            </a>
+          </Motion>
+        </div>
 
-        <ScrollButton className="mx-auto mt-16 desktop:mt-48" href="#classes" />
+        <ScrollButton className={c.scrollButton} href="#classes" />
       </div>
     </section>
   );

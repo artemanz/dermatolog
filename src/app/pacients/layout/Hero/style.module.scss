@@ -4,33 +4,30 @@
   @include BackgroundImage;
 }
 
-.content {
+.container {
   @include Container;
-  padding-top: 24rem;
-  display: flex;
-  flex-direction: column;
+  @include Hero;
+}
 
-  @media ($desktop) {
-
-padding-top: 12rem;
-  }
+.content {
+  @include HeroWrapper;
 }
 
 .title {
   @include H1;
-  text-transform: uppercase;
 }
 
 .button {
   @include Button;
+  min-width: 20rem;
 }
 
 .buttonsGroup {
-  margin-top: 5rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   align-items: center;
+  gap: 2rem;
+  margin-block: 5rem;
 
   @media ($desktop) {
     flex-direction: row;
@@ -39,7 +36,12 @@ padding-top: 12rem;
 
 .buttonSecondary {
   @include Button;
+  @include bg-hover(var(--color-secondary-1));
+  min-width: 20rem;
   background-color: var(--color-secondary);
 
-  @include bg-hover(var(--color-secondary-1));
+}
+
+.scrollButton {
+  @include ScrollButton;
 }

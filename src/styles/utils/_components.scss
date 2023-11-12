@@ -68,6 +68,7 @@
 }
 
 @mixin SectionTitle {
+  font-weight: 500;
   line-height: 1;
   font-size: 3rem;
   @media ($desktop) {
@@ -141,4 +142,38 @@
   background-size: cover;
   width: 31.25rem;
   height: 31.25rem;
+}
+
+@mixin Hero {
+  min-height: fit-content;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 8rem
+}
+
+@mixin ScrollButton {
+  margin-inline: auto;
+  transition: color 300ms ease;
+
+  @include hover {
+    color: var(--color-accent);
+  }
+}
+
+@mixin HeroWrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@mixin HeroSubtitle {
+  font-family: var(--font-secondary);
+  color: var(--color-accent);
 }

@@ -11,7 +11,7 @@
 .classes {
   display: flex;
   flex-direction: column;
-  gap: 10rem;
+  gap: 6rem;
 
   h2,
   p {
@@ -39,7 +39,8 @@
 
   &Title {
     color: var(--color-accent);
-    font-family: var(--font-secondary);
+
+    font-weight: 500;
     font-size: 2rem;
     line-height: 1.2;
 
@@ -50,7 +51,9 @@
 
   &Info {
     margin-top: 1rem;
+    line-height: 2;
     @media ($desktop) {
+      line-height: 1.5;
       font-size: 1.25rem;
     }
   }
@@ -74,7 +77,7 @@
     margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    gap: 2rem;
+    gap: 1rem;
   }
 
   &Title {
@@ -97,11 +100,7 @@
   &Name {
     font-weight: 500;
     color: #fff;
-    font-size: 1.5rem;
-
-    @media ($desktop) {
-      font-size: 2rem;
-    }
+    font-size: 2rem;
   }
 
   &Info {
@@ -110,11 +109,13 @@
   }
 
   &Length {
+    font-size: 1.25rem;
     margin-top: auto;
     color: var(--color-neutral);
   }
 
   &Price {
+    font-size: 1.25rem;
     margin-top: 1rem;
     color: var(--color-neutral);
 

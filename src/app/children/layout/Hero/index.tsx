@@ -18,22 +18,24 @@ const Hero = (props: Props) => {
         alt="Врач с ребенком"
       />
 
-      <div className={c.content}>
-        <Motion animate="from_bottom">
-          <h1 className={c.title}>ДЕТСКОЕ НАПРАВЛЕНИЕ</h1>
-        </Motion>
+      <div className={c.container}>
+        <div className={c.content}>
+          <Motion animate="from_bottom">
+            <h1 className={c.title}>Детское направление</h1>
+          </Motion>
 
-        <div className={c.text}>
-          <Motion element="p" animate="from_bottom" delay={0.5}>
-            К детям нужен <span>особенный</span>, очень{" "}
-            <span>индивидуальный</span> подход
-          </Motion>
-          <p>&nbsp;</p>
-          <Motion element="p" animate="from_bottom" delay={0.75}>
-            Мы работаем на результат, а отличный результат возможен только,
-            когда всем комфортно, и, кажется, я нашла нужный{" "}
-            <span>«элексир комфорта»</span>
-          </Motion>
+          <div className={c.text}>
+            <Motion element="p" animate="from_bottom" delay={0.5}>
+              К детям нужен <span>особенный</span>, очень{" "}
+              <span>индивидуальный</span> подход
+            </Motion>
+            <p>&nbsp;</p>
+            <Motion element="p" animate="from_bottom" delay={0.75}>
+              Мы работаем на результат, а отличный результат возможен только,
+              когда всем комфортно, и, кажется, я нашла нужный{" "}
+              <span>«элексир комфорта»</span>
+            </Motion>
+          </div>
         </div>
 
         <ScrollButton className="mx-auto" href="#services" />

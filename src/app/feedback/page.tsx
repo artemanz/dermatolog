@@ -15,8 +15,8 @@ const Reviews = async () => {
         <Image className={c.bg} src={bg} alt="Bg" />
         <Image className={c.mobileBg} src={mobilebg} alt="Bg" />
 
-        <div className={c.content}>
-          <h1 className={c.title}>ОТЗЫВЫ</h1>
+        <div className={c.container}>
+          <h1 className={c.title}>Отзывы</h1>
 
           <div className={c.sliderContainer}>
             <ReviewsSlider reviews={reviews.slice(0, 6)} />

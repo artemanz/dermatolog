@@ -4,9 +4,9 @@
   @include Container;
   border-bottom: 1px solid #fff;
   p {
-    line-height: 1.7;
-
+    line-height: 2;
     @media ($desktop) {
+      line-height: 1.5;
       font-size: 1.25rem;
     }
   }
@@ -41,10 +41,10 @@
 }
 
 .block {
-  padding-block: 5rem;
+  padding-block: 4rem;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 
 .textBlock {

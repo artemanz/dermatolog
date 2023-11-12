@@ -13,21 +13,23 @@ const Hero = (props: Props) => {
     <section className="relative">
       <Image className={c.bg} src={bg} alt="Врач" />
 
-      <div className={c.content}>
-        <Motion animate="from_bottom">
-          <h1 className={c.title}>Пациентам</h1>
-        </Motion>
+      <div className={c.container}>
+        <div className={c.content}>
+          <Motion animate="from_bottom">
+            <h1 className={c.title}>Пациентам</h1>
+          </Motion>
 
-        <Motion animate="from_bottom" className={c.buttonsGroup} delay={0.5}>
-          <Link className={c.button} href={CTA}>
-            Очная консультация
-          </Link>
-          <Link className={c.buttonSecondary} href={CTA}>
-            Онлайн консультация
-          </Link>
-        </Motion>
+          <Motion animate="from_bottom" className={c.buttonsGroup} delay={0.5}>
+            <Link className={c.button} href={CTA}>
+              Очная консультация
+            </Link>
+            <Link className={c.buttonSecondary} href={CTA}>
+              Онлайн консультация
+            </Link>
+          </Motion>
+        </div>
 
-        <ScrollButton className="mx-auto mt-16 desktop:mt-48" href="#info" />
+        <ScrollButton className={c.scrollButton} href="#info" />
       </div>
     </section>
   );

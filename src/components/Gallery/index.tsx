@@ -10,9 +10,10 @@ import Image, { StaticImageData } from "next/image";
 interface Props {
   name: string;
   items: (string | StaticImageData)[];
+  desctiptions?: (string | null)[];
 }
 
-const Gallery = ({ name, items }: Props) => {
+const Gallery = ({ name, items, desctiptions }: Props) => {
   return (
     <div className={c.sliderContainer}>
       <Swiper
@@ -39,6 +40,9 @@ const Gallery = ({ name, items }: Props) => {
         {items.map((gi, idx) => (
           <SwiperSlide className={c.slide} key={idx}>
             <Image className={c.image} src={gi} alt="Изображение галлереи" />
+            {desctiptions && desctiptions[idx] && (
+              <p className="text-lg desktop:text-xl text-center">{desctiptions[idx]}</p>
+            )}
           </SwiperSlide>
         ))}
       </Swiper>

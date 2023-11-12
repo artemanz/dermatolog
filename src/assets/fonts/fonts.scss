@@ -1,8 +1,16 @@
 @font-face {
   font-family: "Muller";
+  src: url("./MullerBold.woff") format("woff"),
+    url("./MullerBold.woff2") format("woff2");
+
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Muller";
   src: url("./MullerMedium.woff") format("woff"),
     url("./MullerMedium.woff2") format("woff2");
 
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
 }

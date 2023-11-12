@@ -18,14 +18,14 @@ const Price =  () => {
       <section className="relative">
         <Image className={c.bg} src={bg} alt="Bg" />
         <div className={c.backdrop} />
-        <div className={c.content}>
+        <div className={c.heroContainer}>
           <Motion animate="from_bottom">
-            <h1 className={c.title}>ПРАЙС</h1>
+            <h1 className={c.title}>Прайс</h1>
           </Motion>
           <Motion
             element="p"
             animate="from_left"
-            className="mt-8 desktop:text-xl max-w-xs"
+            className={c.subtitle}
           >
             Актуальные цены необходимо уточнять у администраторов клиники
           </Motion>
