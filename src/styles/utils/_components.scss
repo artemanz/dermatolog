@@ -147,7 +147,7 @@
 @mixin Hero {
   min-height: fit-content;
   height: 100vh;
-  height: 100dvh;
+  height: 100svh;
   max-height: 75rem;
   display: flex;
   flex-direction: column;
